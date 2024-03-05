@@ -12,12 +12,11 @@ spec:
     metadata:
       labels:
         hello-php: web
-      spec:
-        containers:
-        - name: hello-site
-          image: dparrab/docker-php-sample
-          imagePullPolicy: Always
-
+    spec:
+      containers:
+      - name: hello-site
+        image: dparrab/docker-php-sample
+        imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
@@ -32,4 +31,3 @@ spec:
   - port: 80
     targetPort: 80
     nodePort: 30001
-
